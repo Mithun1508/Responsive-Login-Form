@@ -69,7 +69,7 @@ $forgetHoverColor: white;
 
 We Will be using mixins in the login form. Mixins works as a normal function in any language.
 
-Mixin #1
+# Mixin #1
 # flexbox properties. 
 
 We will be using the flexbox properties in many places so it's better to create a mixin for that.
@@ -86,7 +86,7 @@ We will be using the flexbox properties in many places so it's better to create 
 
 # including the mixin by @include enableFlex();
 
-Mixin #2
+# Mixin #2
 Our second mixin would be for the button elements.
 @mixin buttonStyles($backgroundColor, $fontColor) {
   padding: 0.8rem 1.5rem;
