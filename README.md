@@ -70,7 +70,7 @@ $forgetHoverColor: white;
 We Will be using mixins in the login form. Mixins works as a normal function in any language.
 
 # Mixin #1
-# flexbox properties. 
+# Flexbox properties. 
 
 We will be using the flexbox properties in many places so it's better to create a mixin for that.
 @mixin enableFlex($direction: false) {
@@ -82,9 +82,7 @@ We will be using the flexbox properties in many places so it's better to create 
   }
 }
 
-#Here we have also used an optional parameter for the flexbox direction. We have used @if rule to check if the parameter is true. If you don't pass any parameters while including the mixin then it will take false by default.
-
-# including the mixin by @include enableFlex();
+#Here we have also used an optional parameter for the flexbox direction. We have used @if rule to check if the parameter is true. If you don't pass any parameters while including the mixin then it will take false by default. including the mixin by @include enableFlex();
 
 # Mixin #2
 Our second mixin would be for the button elements.
@@ -99,11 +97,14 @@ Our second mixin would be for the button elements.
   color: $fontColor;
   cursor: pointer;
   transition: background 0.5s;
+  
+  
   &:hover {
     background: darken($backgroundColor, 20%)
       radial-gradient(circle, transparent 1%, darken($backgroundColor, 20%) 1%)
       center/15000%;
   }
+  
   &:active {
     background-color: darken($backgroundColor, 30%);
     background-size: 100%;
@@ -119,6 +120,7 @@ Now we will apply some global styling to the page.
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background: linear-gradient(to right, $gradientColor1, $gradeintColor2);
   height: 100vh;
@@ -149,12 +151,14 @@ Now the below code would be for our main form.
     @include enableFlex(true);
     height: 80%;
     border-bottom: 0.05rem $pinkOutline solid;
+    
     .social-links {
       display: flex;
       margin-bottom: 2rem;
       position: relative;
       height: 20%;
       cursor: pointer;
+      
       .facebook {
         @include enableFlex();
         position: absolute;
@@ -165,6 +169,7 @@ Now the below code would be for our main form.
           font-size: 0.8rem;
           padding-right: 0.4rem;
         }
+        
         .icon {
           height: 6rem;
           width: 6.5rem;
@@ -177,6 +182,7 @@ Now the below code would be for our main form.
           }
         }
       }
+      
       .twitter {
         @include enableFlex();
         position: absolute;
@@ -202,6 +208,7 @@ Now the below code would be for our main form.
         }
       }
     }
+    
     .main-form {
       @include enableFlex(true);
       button {
@@ -252,11 +259,13 @@ Now the below code would be for our main form.
             }
           }
         }
+        
         .twitter {
           right: -10rem;
           span {
             font-size: small;
           }
+          
           .icon {
             height: 4rem;
             width: 4rem;
@@ -267,6 +276,7 @@ Now the below code would be for our main form.
           }
         }
       }
+      
       .main-form {
         input {
           width: 15rem;
@@ -276,6 +286,7 @@ Now the below code would be for our main form.
         }
       }
     }
+    
     .section-two {
       button {
         width: 15rem;
