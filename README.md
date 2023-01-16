@@ -1,4 +1,4 @@
-# Build a responsive login form using HTML and SCSS.
+# Build a responsive login form using Pure HTML and SCSS.
 
 Here we have created a main container div and the whole form is divided in two main sections.
 
@@ -284,5 +284,8 @@ Now the below code would be for our main form.
   }
 }
 That's it !! Do check it out below link.
+#Final Landing page looks like this
+
+![Screenshot (29)](https://user-images.githubusercontent.com/93249038/212607375-f5d06fe9-c7b8-489d-b98a-e3c1861fe48c.png)
 
 # site is Live Now: https://csb-uuysxh.netlify.app/
